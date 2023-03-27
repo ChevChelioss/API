@@ -24,7 +24,7 @@
 - WebDriver для браузера Chrome
 - Приложение Allure для формирования отчетов
 
-### Для проверки корректности заполнения формы используются следующие тесты:
+### Для API-тестирования функционала используются следующие тесты:
 - Тест на проверку успешного создания пользователя
 - Тест на проверку успешного обновления данных пользователя
 - Тест на проверку успешной регистрации пользователя
@@ -35,7 +35,7 @@
 <!-- Jenkins -->
 
 ## <img height="30" src="https://github.com/ChevChelioss/ChevChelioss/blob/main/logo/jenkins.png"> Jenkins
-### [JOB](https://jenkins.autotests.cloud/job/UI_testing_qa_guru_python_3_jenkins/11/)
+### [JOB](https://jenkins.autotests.cloud/job/API_testing_qa_guru_python_3_jenkins/)
 ##### Кликните "Собрать сейчас"
 запущенную сборку вы увидите в "Истории сборки" 
 
