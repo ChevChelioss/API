@@ -8,4 +8,4 @@ load_dotenv()
 
 @pytest.fixture(scope='session')
 def reqres():
-    return BaseSession(os.getenv("URL"))
+    return BaseSession(os.getenv("REQ_URL"))
