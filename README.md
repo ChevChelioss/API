@@ -12,6 +12,8 @@
 <code><img height="50" src="https://github.com/ChevChelioss/ChevChelioss/blob/main/logo/selene.png"></code>
 <code><img height="50" src="https://github.com/ChevChelioss/ChevChelioss/blob/main/logo/allure_testops.png"></code>
 <code><img height="50" src="https://github.com/ChevChelioss/ChevChelioss/blob/main/logo/allure_report.png"></code>
+<code><img height="50" src="https://github.com/ChevChelioss/ChevChelioss/blob/main/logo/selenoid.png"></code>
+<code><img height="50" src="https://github.com/ChevChelioss/ChevChelioss/blob/main/logo/requests.png"></code>
 <code><img height="50" src="https://github.com/ChevChelioss/ChevChelioss/blob/main/logo/jenkins.png"></code>
 <code><img height="50" src="https://github.com/ChevChelioss/ChevChelioss/blob/main/logo/selenium.png"></code>
 <code><img height="50" src="https://github.com/ChevChelioss/ChevChelioss/blob/main/logo/jira.png"></code>
@@ -24,12 +26,38 @@
 - WebDriver для браузера Chrome
 - Приложение Allure для формирования отчетов
 
+### Проект состоит из двух тестовых наборов:
+<details><summary><b>API тестирование функционала - test_reqres</b></summary>
+<ul>
+  <li>Тест на проверку успешного создания пользователя</li>
+  <li>Тест на проверку успешного обновления данных пользователя</li>
+  <li>Тест на проверку успешной регистрации пользователя</li>
+  <li>Тест на проверку неудачной регистрации пользователя</li>
+  <li>Тест на проверку успешного удаления пользователя</li>
+</ul>
+
+<details><summary><b>UI/API тестирование функционала - test_demowebshop</b></summary>
+<ul>
+  <li>Тест на успешную авторизацию</li>
+  <li>Тест на обновление информации о пользователе</li>
+  <li>Тест на добавление товара в корзину и проверку содержимого корзины</li>
+  <li>Тест на удаление товара из корзины</li>
+  <li>Тест на проверку функциональности поиска товаров</li>
+  <li>Тест на успешный выход из аккаунта</li>
+</ul>
+
+
 ### Для API-тестирования функционала используются следующие тесты:
-- Тест на проверку успешного создания пользователя
-- Тест на проверку успешного обновления данных пользователя
-- Тест на проверку успешной регистрации пользователя
-- Тест на проверку неудачной регистрации пользователя
-- Тест на проверку успешного удаления пользователя
+- 
+- 
+- 
+- 
+- 
+
+
+
+### Видео о прохождении одного из тестов
+![This is an image](screenshots/video.gif)
 
 
 <!-- Jenkins -->
