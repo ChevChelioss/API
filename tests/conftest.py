@@ -69,6 +69,6 @@ def reqres():
     return BaseSession(os.getenv("REQ_URL"))
 
 
-@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture(scope='function', autouse=True)
 def add_labels():
     allure.dynamic.label('owner', 'Artur Gabdrakhmanov')
