@@ -1,16 +1,14 @@
 import allure
 from pytest_voluptuous import S
 from schemas.user import *
-from utils.endpoints import USERS_ENDPOINT, USER_ENDPOINT_FORMAT, REGISTER_ENDPOINT
+from utils.endpoints import *
 
 
-def test_create_user_successfully(reqres):
-    """
-    Test case for successfully creating a user.
-    """
+@allure.title('Creating a user')
+def test_create_user_successfully(reqres, add_labels):
     name = 'Chev'
     job = 'leader'
-    with allure.step('create_user_successfully'):
+    with allure.step('Sending a request to create a user'):
         create_user = reqres.post(USERS_ENDPOINT, {'name': name, 'job': job})
 
         assert create_user.status_code == 201
@@ -20,14 +18,12 @@ def test_create_user_successfully(reqres):
         assert create_user.json()['job'] == job
 
 
-def test_update_user_successfully(reqres):
-    """
-    Test case for successfully updating a user.
-    """
+@allure.title('Updating a user')
+def test_update_user_successfully(reqres, add_labels):
     user_id = 2
     update_name = 'morpheus'
     update_job = 'follower'
-    with allure.step('update_user_successfully'):
+    with allure.step('Sending a request to update a user'):
         update_user = reqres.put(USER_ENDPOINT_FORMAT.format(user_id), {'name': update_name, 'job': update_job})
 
         assert update_user.status_code == 200
@@ -37,13 +33,11 @@ def test_update_user_successfully(reqres):
         assert update_user.json()['job'] == update_job
 
 
-def test_register_successfully(reqres):
-    """
-    Test case for successful registration.
-    """
+@allure.title('Successful registration and receiving token')
+def test_register(reqres, add_labels):
     email = 'eve.holt@reqres.in'
     password = 'pistol'
-    with allure.step('register_successfully'):
+    with allure.step('Register successfully'):
         register_successful = reqres.post(REGISTER_ENDPOINT, {'email': email, 'password': password})
 
         assert register_successful.status_code == 200
@@ -52,24 +46,20 @@ def test_register_successfully(reqres):
         assert register_successful.json()['token'] == 'QpwL5tke4Pnpja7X4'
 
 
-def test_register_unsuccessfully(reqres):
-    """
-    Test case for unsuccessful registration.
-    """
+@allure.title('Registration with invalid data')
+def test_register_with_invalid_data(reqres, add_labels):
     email = 'sydney@fife'
     password = 'pistol'
-    with allure.step('register_unsuccessfully'):
+    with allure.step('Attempt to register with invalid data'):
         register_unsuccessful = reqres.post(REGISTER_ENDPOINT, {'email': email, 'password': password})
 
         assert register_unsuccessful.status_code == 400
 
 
-def test_delete_user_successfully(reqres):
-    """
-    Test case for successfully deleting a user.
-    """
+@allure.title('Deleting a user')
+def test_delete_user_successfully(reqres, add_labels):
     user_id = 2
-    with allure.step('delete_user_successfully'):
+    with allure.step('Sending request to delete a user'):
         delete_user = reqres.delete(USER_ENDPOINT_FORMAT.format(user_id))
 
         assert delete_user.status_code == 204
